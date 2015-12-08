@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>情绪拼图imoodmap</title>
+
+    <!-- Bootstrap -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/jquery.min.js" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    h3 {
+     color: green;
+	 font-family: courier;
+	 font-size:200%;
+	 text-align:center;
+	 }
+    </style>
+  </head>
+  <body >
+  <!-- 标题 -->
+    <ol class="breadcrumb" >
+      <li><a href="https://tower.im/projects/baceaab652a04ef7ae567848f9eeb370/">Home</a></li>
+      <li><a href="https://tower.im/teams/948c52d986084a1fbb011f3aa7aa6df4/calendar_events/8445eb47fd8e4d65b029859f847a7eaf/">2015</a></li>
+      <li class="active">十二月</li>
+    </ol>
+  <!-- 设置边缘空行 -->
+
+    <div class="jumbotron masthead" style="color:#99A741; background:transparent linear-gradient(40deg, #666668 0px, #D41370 100%">
+      <div class="container" text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075) >
+        <h1 >情绪拼图，拼出一个不同的你！</h1>
+        <h2>IMM welcome you to map another colorful you！</h2>
+        <div style="padding: 100px 100px 10px;">
+          <form class="bs-example bs-example-form" role="form" action="/imoodmap" method="POST">
+            <div class="input-group input-group-lg">
+              <!-- 此处最好加入下拉选项，方便选择 -->
+              <span class="input-group-addon">七彩情绪</span>
+              <input type="text" class="form-control" placeholder="你当下的情绪" name="currentemotion">
+              <!-- 此处最好回车提交 -->
+              <input value="try" type="submit" />
+            </div><br>
+            <div class="input-group input-group-lg">
+              <!-- 此处最好加入下拉选项，方便选择 -->
+              <span class="input-group-addon">心流状态</span>
+              <input type="text" class="form-control" placeholder="你当下心流值0-9 请输入数值" name="currentemotion">
+            </div><br>
+         <!-- 社交功能，值得探索-->
+         <div class="input-group input-group-sm">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="分享给那些支持你爱你的人！">
+          </form>
+         </div>
+        <br>
+        <p  class="masthead-button-links" >
+          <a class="btn btn-lg btn-primary btn-shadow" href="http://v3.bootcss.com/" target="_blank" role="button" onclick="submit">另一种方式提交输入</a>
+        </p>
+        
+      </div>
+    </div>
+    </div>
+
+    <div style="margin:50px background-color:#B35959">
+    <p class="text-center"><h3> imoodmap group </h3></p>
+  <!-- 引用 -->
+    <blockquote class="text-center"> 
+        Keep moving，MVP永远是真理！ 
+    </blockquote>
+    </div>
+  <!-- lists -->
+    <ul class="list-group">
+    <li> </li>
+    <li class="list-group-item"> {{diaryWritten1}}</li>
+    <li class="list-group-item"> hello</li>
+    <li> hello</li>
+    <li> hello</li>
+    </ul>
+    </div>
+    <!-- 这里显示刚拼图的效果 -->
+
+
+        
+      </div>
+    </div>
+    <!-- 放置视频，如何使用 -->
+
+<h3><iframe id="video" width="800" height="480"  src="http://www.youtube.com/embed/uKIPxP-SzSY?rel=0" framebor                                                                    der="0" allowfullscreen></iframe></h3>
+
+    <div class="panel panel-primary">
+       <div class="panel-heading">
+           <h3 class="panel-title">拼图秀</h3>
+       </div>
+       <div class="panel-body">
+         <div class="jumbotron" >  
+          <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                      <img src="flow.png" alt="">
+                      <p> hello</p>
+                      <p><a href="https://www.google.com" class="btn btn-default">search</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                   <div class="thumbnail">
+                      <img src="http://www.infoq.com/resource/articles/agile-kanban-boards/en/resources/Fig5_hitori-niko.jpg" class="img-rounded">
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                111
+                </div>                                
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                111
+                </div>            
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="jumbotron" style="background-color:#B35959">
+        <div class="bc-social">
+      <div class="container">
+        <ul class="bc-social-buttons">
+          <li class="social-qq">
+            <i class="fa fa-qq"></i> imoodmap Group 微信群：<span id="qqgroup">imoodmap互助讨论群</span>
+          </li>
+          <li class="social-forum">
+            <a class="" href="https://github.com/imoodmap/imoodmapGroup/issues" title="Github Group: imoodmap" target="_blank" >
+              <i class="fa fa-comments"></i> Github Group: imoodmap
+            </a>
+          </li>
+          <li class="social-weibo">
+          <!-- 如果建立微博，使用 -->
+            <a href="http://weibo.com/bootcss" title="imoodmap 微博" target="_blank" ></i> 新浪微博：@imoodmap</a>
+          </li>
+        </ul>
+      </div>
+   
+
+  </body>
+</html>
