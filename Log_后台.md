@@ -1,5 +1,5 @@
 #####2015-12-11 10:31
-- 在本地和个人sae（storychain.saeapp.com/imoodmap）进行初步调试，解决显示字符编码而非中文的问题，并消除一些小bug
+- 在本地和个人sae（http://storychain.sinaapp.com/imoodmap）进行初步调试，解决显示字符编码而非中文的问题，并消除一些小bug
 - 现存问题
   - 并非私人系统，不同人员记录会混在一起
   - 添加制图
