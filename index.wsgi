@@ -16,8 +16,23 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-debug(True)
+
 app = Bottle()
+
+# CSS file 这样加入更好，现在在template上加入bootstrap了
+from bottle import static_file
+@app.route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root = "./static/css")
+
+@app.route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root ="./static/js")
+
+@app.route('/images/<filename:re:.*\.png>')
+def send_image(filename):
+    return static_file(filename, root='./images', mimetype='image/png')
+
 
 #情绪显示/新输入
 @app.route('/imoodmap', method='get')
@@ -52,9 +67,7 @@ def backup():
 	kv.disconnect_all()
 	return '备份成功'
 
-#CSS, images
-@app.route('/static/<filename>')
-def server_static(filename):
-	return static_file(filename, root = '/path')
-	
+
+
+debug(True)
 application = sae.create_wsgi_app(app)
