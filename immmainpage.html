@@ -104,6 +104,17 @@
         </div>
     </div>
 
+        <div class="form-group">
+            <label for="species" class="col-sm-2 control-label">物种</label>
+                <div class="col-sm-9 dropdown">
+                        <select class="form-control" id="species" name="species">
+                                <option>狗狗</option>
+                                <option>猫猫</option>
+                                <option>其他</option>
+                        </select>
+                </div>
+        </div>
+
 
     <div class="jumbotron masthead" style="color:#99A741; background:transparent  linear-gradient(40deg, #666668 0px, #D41370 100%">
       <div class="container" text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075) >
@@ -113,7 +124,16 @@
             <div class="input-group ">
               <!-- 此处最好加入下拉选项，方便选择 -->
               <span class="input-group-addon">七彩情绪</span>
-              <input type="text" class="control-form" placeholder="你当下的情绪" name="currentemotion" onblur="submit" />
+              <div class="dropdown" placeholder="你的情绪">
+                <select class="form-control" id="species" name="species">
+                                <option>快乐</option>
+                                <option>悲伤</option>
+                                <option>恐惧</option>
+                                <option>愤怒</option>
+                                <option>惊奇</option>                                
+                </select>
+              </div>
+              <!--<input type="text" class="control-form" placeholder="你当下的情绪" name="currentemotion" onblur="submit" />-->
               <!-- 此处最好回车提交 -->
               
             </div><br>
