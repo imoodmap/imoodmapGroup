@@ -64,24 +64,93 @@
         </div> <!-- container -->
     </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron">
+            <div class="jumbotron" style= "background-color: #F9BC07">
                 <h2>
                     Joy will come you!
                 </h2>
                 <p>
                     The description of JOY!
                 </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                </p>
+
             </div>
         </div>
     </div>
 </div>
 
+<div class="container-fluid">
+    <div class="row col-md-6 col-md-offset-3">
+        <form class="form-horizontal" role="form" action="/submit" method="post" enctype="multipart/form-data">
+
+        <div class="form-group" >
+         <label for="flowValue" class=" control-label">心流值</label>
+            <div class="dropdown">
+                <select class="form-control" id="flowValue" name="flowValue">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>                    
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" >
+         <label for="tireness" class=" control-label">疲劳度</label>
+            <div class="dropdown">
+                <select class="form-control" id="tireness" name="tireness">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>                    
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            </div>
+        </div>        
+
+        <div class="form-group">
+
+         <label for="tpfeeling" class="control-label">温度感觉</label>
+          <div class="dropdown">
+                <select class="form-control" id="tpfeeling" name="tpfeeling">
+                    <option>太热</option>
+                    <option>太冷</option>
+                    <option>太闷</option>
+                    <option>适宜</option>
+
+                </select>
+            </div><br>
+
+        <div class="form-group">
+           <label for="diaryContent" class="control-label">你的感受和想法</label>
+
+              <textarea class ="form-control" name="diaryContent"
+              id="diaryContent"
+              placeholder="Leave a comment"
+              aria-label="Comment body"
+              ></textarea>
+
+        </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!--
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -175,20 +244,13 @@
                     </tr>
                 </tbody>
             </table>
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
+
         </div>
     </div>
 </div>
+-->
 
-<img src="./images/flow.png" border="0" usemap="#planetmap" alt="Planets" />
+<img src="./images/flow.png" border="0" usemap="#planetmap" alt="Planets"  />
 <map name="planetmap" id="planetmap">
   <area shape="circle" coords="500,200,100" href ="imm.html" alt="Venus" />
   <area shape="circle" coords="200,200,300" href ="immmainpage.html" alt="Mercury" />
