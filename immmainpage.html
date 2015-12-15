@@ -38,46 +38,84 @@
   </head>
   <body >
   <!-- 标题 -->
-    <ol class="breadcrumb" >
+<!--    <ol class="breadcrumb" >
       <li><a href="https://tower.im/projects/baceaab652a04ef7ae567848f9eeb370/">Home</a></li>
       <li><a href="https://tower.im/teams/948c52d986084a1fbb011f3aa7aa6df4/calendar_events/8445eb47fd8e4d65b029859f847a7eaf/">2015</a></li>
       <li class="active">十二月</li>
     </ol>
+-->
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+              <a href=/show/all class="navbar-brand">情绪日记</a>
+            </div>
+
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+               <li><a href=/show/diaryReview>日记回顾</a></li>
+              <li><a href=/show/encourage>打气筒</a></li>
+
+
+               <li ><a href=/submit>社区互动</a></li>
+               <li><a href=/about_us>关于我们</a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href=/login>登出</a></li>
+            
+            </ul><!-- navbar-right -->
+
+          </div><!-- navbar-->
+        </div> <!-- container -->
+    </nav>
+
   <!-- 设置边缘空行 -->
 
 
-    <div class="jumbotron masthead" style="color:#99A741; background:transparent  linear-gradient(40deg,  rgb(79, 79, 83) 0px, rgb(6, 34, 56) 100%">
+    <div class="jumbotron masthead" style="color:#99A741; background:transparent  linear-gradient(40deg,  rgb(79, 79, 83) 0px, rgb(170, 176, 180) 100%">
       <div class="container" text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075) >
         <h1 >不开心、难过或者有些沮丧？</h1>
         <div style="padding: 100px 100px 10px;">
          
         <br>
         <p  class="masthead-button-links" >
-          <a class="btn btn-lg btn-primary btn-shadow" href="https://www.yahoo.com/music/" target="_blank" role="button" onclick="submit">听一段音乐吧！</a>
+          <a class="btn btn-primary btn-success" href="https://www.yahoo.com/music/" target="_blank" role="button" onclick="submit">听一段音乐吧！</a>
         </p>
                  <div class="input-group input-group-sm">
             <span class="input-group-addon">@</span>
             <input type="text" class="form-control" placeholder="和支持你爱你的人聊聊吧！">
+            </div>
           </form>
-         </div>
+         
       </div> 
     </div>
     </div>
         <!-- 这里显示刚拼图的效果 -->
-    <div class="panel panel-primary">
-       <div class="panel-heading">
+    <div class="panel panel-primary ">
+       <div class="panel-heading" style="background-color: #C0917A; border-color: #C0917A">
            <h3 class="panel-title">那些珍贵的情感线条</h3>
        </div>
-       <div class="panel-body">
-         <div class="jumbotron" >  
+       <div class="panel-body" style=" background-color:rgb(199, 79, 83)">
+         <div class="jumbotron" style = "background-color:rgb(199, 79, 83)">  
           <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <div class="thumbnail">
-                      <img src="flow.png" alt="">
-                      <p> 看看专家如何描述心流吧</p>
-                      <p><a href="www.ted.com/talks/mihaly_csikszentmihalyi_on_flow" class="btn btn-default">视频TED</a></p>
+                    <div class="thumbnail control-panel">
+                      <img src="flow.png" alt="" class="img-rounded">
                     </div>
+                      <p > 看看专家如何描述心流吧</p>
+                      <p><a href="www.ted.com/talks/mihaly_csikszentmihalyi_on_flow" class="btn btn-default">视频TED</a></p>
+                    
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-6">
                    <div class="thumbnail">
@@ -102,20 +140,40 @@
         </div>
     </div>
 
+        <div class="form-group">
+            <label for="species" class="col-sm-2 control-label">物种</label>
+                <div class="col-sm-9 dropdown">
+                        <select class="form-control" id="species" name="species">
+                                <option>狗狗</option>
+                                <option>猫猫</option>
+                                <option>其他</option>
+                        </select>
+                </div>
+        </div>
+
 
     <div class="jumbotron masthead" style="color:#99A741; background:transparent  linear-gradient(40deg, #666668 0px, #D41370 100%">
       <div class="container" text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075) >
         <h1 >开心了吧！来挺挺我吧！</h1>
         <div style="padding: 100px 100px 10px;">
           <form class="bs-example bs-example-form" role="form" action="/imoodmap" method="POST">
-            <div class="input-group input-group-lg">
+            <div class="input-group ">
               <!-- 此处最好加入下拉选项，方便选择 -->
               <span class="input-group-addon">七彩情绪</span>
-              <input type="text" class="form-control" placeholder="你当下的情绪" name="currentemotion" onblur="submit" />
+              <div class="dropdown" placeholder="你的情绪">
+                <select class="form-control" id="species" name="species">
+                                <option>快乐</option>
+                                <option>悲伤</option>
+                                <option>恐惧</option>
+                                <option>愤怒</option>
+                                <option>惊奇</option>                                
+                </select>
+              </div>
+              <!--<input type="text" class="control-form" placeholder="你当下的情绪" name="currentemotion" onblur="submit" />-->
               <!-- 此处最好回车提交 -->
               
             </div><br>
-            <div class="input-group input-group-lg">
+            <div class="input-group ">
               <!-- 此处最好加入下拉选项，方便选择 -->
               <span class="input-group-addon">心流状态</span>
               <input type="text" class="form-control" placeholder="你当下心流值0-9 请输入数值" name="currentemotion">
@@ -135,7 +193,7 @@
     </div>
     </div>
 
-    <div style="margin:50px background-color:#B35959">
+
     <p class="text-center"><h3> 看看OpenMindClub的教练和学员们的情绪</h3></p>
   <!-- 引用 -->
     <blockquote class="text-center"> 
@@ -153,7 +211,7 @@
     </div>
 
       </div>
-    </div>
+
     <!-- 放置视频，如何使用 -->
 
 <!-- <h3><iframe id="video" width="800" height="480"  src="http://www.youtube.com/embed/uKIPxP-SzSY?rel=0" framebor                                                                    der="0" allowfullscreen></iframe></h3> -->
@@ -177,7 +235,8 @@
           </li>
         </ul>
       </div>
-   
+      
+<iframe src="https://modao.cc/app/3e0da6ae671a2cd039f048e45bb7b05085856207/embed" width="1440" height="760" allowTransparency="true" frameborder="0"></iframe>
 
   </body>
 </html>
