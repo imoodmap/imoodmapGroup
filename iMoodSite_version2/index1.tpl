@@ -645,7 +645,7 @@
           <h4 class="modal-title" id="editModalLabel">写日记</h4>
         </div>
         <div class="modal-body">
-          <form action="/editform" method="POST">
+          <form action="/imm/editform" method="POST">
           <div class="form-group" >
           <input name="username" type="text" id="username"/>
 
@@ -653,11 +653,11 @@
          <label for="emotionType" class=" control-label">情绪类型</label>
             <div class="dropdown">
                 <select class="form-control" id="emotionType" name="emotionType">
-                    <option>恐惧</option>
-                    <option>悲伤</option>
-                    <option>愤怒</option>
-                    <option>讨厌</option>
-                    <option>快乐</option>
+                    <option>恐惧 name = Fear</option>
+                    <option>悲伤 name = Depression</option>
+                    <option>愤怒 name = Anger</option>
+                    <option>讨厌 name = Disgust</option>
+                    <option>快乐 name = Joy </option>
                 </select>
             </div>
         </div>  
