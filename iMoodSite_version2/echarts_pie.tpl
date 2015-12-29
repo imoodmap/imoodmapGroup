@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>ECharts_pie</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>情绪统计图 |imoodmap</title>
+
+    <!-- Bootstrap -->
+
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/js/jquery.js" rel="stylesheet" type="text/css"> 
 </head>
 <body>
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+              <a  class="navbar-brand">情绪日记</a>
+            </div>
+
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+
+               <li><a href="/index2">Back</a></li>
+
+
+          </div><!-- navbar-->
+        </div> <!-- container -->
+    </nav>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <p id="test"> 情绪日记 </p>
     <p id="counttypes">{{countTypes}}</p>
@@ -14,8 +46,10 @@
     <script type="text/javascript">
         //传输外部数据jquery
         var outdata = $("#test").text();
-        $("#test").hide();
-        var countdata = $("counttypes").text();
+
+        var countdata =$("#counttypes").text().replace(/[\[\]]/g,"").split(","); //正则表达式获取array
+        $("#counttypes").hide();
+
         // 路径配置
         require.config({
             paths: {
@@ -35,10 +69,10 @@
  option = {
     timeline : {
         data : [
-            '2015-01-01', '2015-02-01', '2015-03-01', '2015-04-01', '2015-05-01',
-            { name:'2015-06-01', symbol:'emptyStar6', symbolSize:8 },
-            '2015-07-01', '2015-08-01', '2015-09-01', '2015-10-01', '2015-11-01',
-            { name:'2015-12-01', symbol:'star6', symbolSize:8 }
+            'Now', '1-1', '1-2', '', '1-3',
+            { name:'1-4', symbol:'emptyStar6', symbolSize:8 },
+            '1-5', '1-6', '1-7', '1-8', '1-9',
+            { name: '1-10', symbol:'star6', symbolSize:8 }
         ],
         label : {
             formatter : function(s) {
@@ -83,15 +117,15 @@
             series : [
                 {
                     name:'情绪类型占比变化',
-                    type:'pie',
+                    type:'pie', 
                     center: ['50%', '45%'],
                     radius: '50%',
                     data:[
-                        {value: 545,  name:'恐惧'},
-                        {value: 545,  name:'悲伤'},
-                        {value: 545,  name:'愤怒'},
-                        {value: 545,  name:'讨厌'},
-                        {value: 545, name:'快乐'}
+                        {value: 100+countdata[0]*100,  name:'恐惧'},
+                        {value: 100+countdata[1]*100,  name:'悲伤'},
+                        {value: 100+countdata[2]*100,  name:'愤怒'},
+                        {value: 100+countdata[3]*100,  name:'讨厌'},
+                        {value: 100+countdata[4]*100, name:'快乐'}
                     ]
                 }
             ]
@@ -266,7 +300,13 @@
 myChart.setOption(option); 
             }
         );
+
+
 </script>
+<br>
+<div class="col-lg-12 text-center">
+<a href="/index2" class="page-scroll btn btn-xl" id="backHome">返回</a>
+</div>
 
 </body>
                            

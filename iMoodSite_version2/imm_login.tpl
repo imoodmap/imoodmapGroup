@@ -54,18 +54,9 @@
                 <span class="icon-bar"></span>
             </button>
 
-              <a href=/show/all class="navbar-brand">情绪日记</a>
+              <a class="navbar-brand">情绪日记</a>
             </div>
 
-          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-
-               <li><a href=/diarymap>日记回顾</a></li>
-              <li><a href=/imoodmap>打气筒</a></li>
-
-
-               <li ><a href=/submit>社区互动</a></li>
-               <li><a href=/about_us>关于我们</a></li>
 
 
           </div><!-- navbar-->

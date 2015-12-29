@@ -36,7 +36,7 @@
     <![endif]-->
     <script type='text/javascript'>
     $(document).ready(function(){
-      $("#services").hide();
+
       $("#portfolio").hide();
       $("#about").hide();
       $("#team").hide();
@@ -46,12 +46,11 @@
       $("#mark").val(function(i,origText){
         return $('#marktag').text();
       });
-      $("#startpoint").click(function(){
-        $("#services").fadeIn("slow");
-      });
-      $("#navservices").click(function(){
-        $("#services").fadeIn("slow");
-      });
+      $("#addoil").click(function(){
+        $("#portfolio").fadeIn("slow");
+      }); 
+
+
       $("#navportfolio").click(function(){
         $("#portfolio").fadeIn("slow");
       });
@@ -99,7 +98,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services" id="navservices">情绪日记</a>
+                        <a class="page-scroll"  href="/review" id="navservices">查看情绪日记</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio" id="navportfolio">打气筒</a>
@@ -123,60 +122,15 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in" id ="marktag">Welcome {{mark}}</div>
-                <div class="intro-lead-in" id ='nametransfer'> {{studentname}} </div>
+                <div class="intro-lead-in" id ='nametransfer' > {{studentname}} </div>
                 <div class="intro-heading">记录生活，此刻心情</div>
-                <a href="#services" class="page-scroll btn btn-xl" id="startpoint">启程</a>
+                <a href="#portfolio" class="page-scroll btn btn-xl" id="addoil">打打气</a>
+
             </div>
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center" >
-                    <h2 class="section-heading">情绪日记</h2>
-                    <h3 class="section-subheading text-muted">即使感觉痛苦，接纳并记录你的情绪！</h3>
-                </div>
-            </div>
-            <div class="col-lg-12 text-center" style="margin:0 auto">
 
-                   <!-- <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span> -->
-                  <!--  <a href="#editModal" data-toggle="modal"><span class="glyphicon glyphicon-edit" aria-hidden="true" id ="colorfulemotions"></span></a>-->
-
-
-                  <a href="#editModal" data-toggle="modal">
-                    <span class="fa-stack fa-4x" id ="colorfulemotionss">
-                        <i class="fa fa-circle fa-stack-2x "></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                    <h4 class="service-heading">五彩情绪</h4>
-                    <p class="text-muted"></p>
-
-
-                <!--
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                 <h4 class="service-heading">共同分享</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-
-                       <div class="input-group input-group-sm">
-            <span class="input-group-addon">@</span>
-            <input type="text" class="form-control" placeholder="分享给那些支持你爱你的人！">
-          </form>
-         </div> -->
-
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
@@ -188,8 +142,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="portfolio-item" style ="margin:0 auto">
-                <a href="#editModal" class="portfolio-link" data-toggle="modal">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#editModal2" class="portfolio-link" data-toggle="modal">
                  <!--   <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"> -->
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -204,7 +158,7 @@
                     </div>
                 </div>
                 <!--连接图表-->
-                <div class="portfolio-item" style ="margin:0 auto">
+                <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -216,68 +170,9 @@
                     <div class="portfolio-caption">
                         <h4>经历过的每一天</h4>
                         <p class="text-muted"></p>
-                        <!--<a href="#" class="page-scroll btn btn-xl" id="show_echarts">showEcharts</a>-->
-                    </div>
-
-                
-
-                </div>
-               <!--暂时先不显示 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/beauty.jpeg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>打开你曾经那些美好的记忆</h4>
-                        <p class="text-muted"></p>
-                    </div>
-                </div> -->
-             <!--不知道   <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>-->
+    
             </div>
         </div>
     </section>
@@ -476,97 +371,97 @@
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                           
+                            <ul class="list-inline">
+                                <li>Date: July 2014</li>
+                                <li>Client: Round Icons</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
     <!-- Modal for edit -->
-  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+  <div class="modal fade" id="editModal2" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="editModalLabel">写日记</h4>
+          <h4 class="modal-title" id="editModalLabel2">打气筒</h4>
         </div>
         <div class="modal-body">
-          <form action="/editform" method="POST">
-          <div class="form-group" >
-          <input name="username" type="text" id="username" style="display: none" />
-          <input name="mark" type="text" id="mark" style="display: none"/>
-
-           <div class="form-group" >
-         <label for="emotionType" class=" control-label">情绪类型</label>
-            <div class="dropdown">
-                <select class="form-control" id="emotionType" name="emotionType">
-                    <option name ="Fear">恐惧</option>
-                    <option name ="Depression">悲伤</option>
-                    <option name ="Anger">愤怒</option>
-                    <option name = "Disgust">讨厌</option>
-                    <option name ="Joy">快乐</option>
-                </select>
-            </div>
-        </div>  
-           <div class="form-group" >
-         <label for="flowValue" class=" control-label">心流值</label>
-            <div class="dropdown">
-                <select class="form-control" id="flowValue" name="flowValue">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>                    
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                </select>
-            </div>
-        </div>  
-                <div class="form-group" >
-           <label for="tireness" class=" control-label">疲劳度</label>
-            <div class="dropdown">
-                <select class="form-control" id="tireness" name="tireness">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>                    
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                </select>
-            </div>
-        </div> 
-        <div class="form-group" >
-        <label for="tpfeeling" class="control-label">温度感觉</label>
-          <div class="dropdown">
-                <select class="form-control" id="tpfeeling" name="tpfeeling">
-                    <option>太热</option>
-                    <option>太冷</option>
-                    <option>太闷</option>
-                    <option>适宜</option>
-
-                </select>
-            </div>   
+      <form action="/pythonRESP.py">
         <div class="form-group">
-           <label for="diaryContent" class="control-label">你的感受和想法</label>
+           <label for="addoil" class="control-label">鼓励自己，鼓励大家</label>
 
-              <textarea class ="form-control" name="diaryContent"
-              id="diaryContent"
+              <textarea class ="form-control" name="addoil"
+              id="addoil"
               placeholder="Leave a comment"
               aria-label="Comment body"
               ></textarea>
 
-            <button class="btn btn-primary" type="submit" id="submitData">提交</button>
+            <div class="form-group">
+              <label class="control-label">添加标签:</label>
+              <input type="text" class="form-control" name="editTags" />
+            </div>
+            <button class="btn btn-primary" type="submit" data-dismiss="modal" id="submitData2">提交</button>
+        </div>
           </form>
         </div>
       </div>
     </div>
   </div> 
-
-
 
     <!-- jQuery -->
     <script src="./static/js/jquery.js"></script>

@@ -72,14 +72,30 @@ def send_image(filename):
     return static_file(filename, root='.static/img', mimetype='image/jpg')
 
 
+
+
 @app.route('/')
 @app.route('/login')
 def login():
+    
     return template('imm_login', alertContent = "请登录，第一次见面直接登录注册")
 
 @app.route('/login', method ="POST")
+def checklogin():
+
     studentName = request.forms.get('studentname')
     pwd = request.forms.get('password')
+
+    values ={'user': studentName, 'password': pwd}
+
+    # Enable cookie support for urllib2
+    #cookiejar = cookielib.CookieJar()
+    #urlOpener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookiejar))
+    #use cookie to login in
+    #if 'id' in [cookie.name for cookie in cookiejar]:
+    # Send login/password to the site and get the session cookie
+
+
 
     #connect db
     db = MySQLdb.connect(
@@ -113,10 +129,12 @@ def login():
         if studentName == item[0] and pwd == item[1]:
             cursor.close()
             db.close()
+            response.set_cookie("account", studentName, secret= '123')
             return template('index1', studentname = studentName, mark ="back")
 
 
     #用户不存在，则注册
+    response.set_cookie("account", studentName, secret= '123')
     #cursor.execute('INSERT INTO user_data(studentname,password) VALUES("%s","%s")'%(studentName,pwd))
     cursor.execute('INSERT INTO users(studentName,password) VALUES("%s",AES_ENCRYPT(%s, ("key"+"%s")))'%(studentName,pwd, studentName))
     cursor.close()
