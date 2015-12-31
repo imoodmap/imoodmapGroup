@@ -1,8 +1,8 @@
-# imoodmapGroup
+# imoodmapGroup 开发仓库
 ## 代码仓库
-- 此处为代码交流，合并的仓库
-- 请将开发文档都push到 develop branch上(暂停)
-- 讨论之后merge到master
+- 此处为imoodmap项目官方仓库
 
 ## 简化流程
 - 直接pull/push master
+- 
+## 2016年代码更新
